@@ -12,10 +12,10 @@
               <img v-else-if="imageLoopShowIndex == 2" src="../assets/3.jpg" />
             </Transition>
           </div>
-          <div>
-            <div>更多文章</div>
-            <div>更多实验</div>
-            <div>王者荣耀精彩集锦</div>
+          <div class="home-recommend-item-box">
+            <div class="home-recommend-item home-recommend-content-more-article">更多文章</div>
+            <div class="home-recommend-item home-recommend-content-more-laboratory">更多文章</div>
+            <div class="home-recommend-item home-recommend-content-more-game">王者荣耀</div>
           </div>
         </div>
       </div>
@@ -110,11 +110,54 @@ export default {
 }
 
 .home-recommend {
-  position: relative;
   width: 100%;
   height: 450px;
   user-select: none;
   margin-top: 20px;
+}
+
+.home-recommend-content {
+  /* display: flex; */
+
+}
+
+.home-recommend-item {
+  width: 380px;
+  height: 80px;
+  border-radius: 5px;
+  line-height: 80px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.home-recommend-item+.home-recommend-item {
+  margin-top: 15px;
+}
+
+.home-recommend-content-more-article {
+  background:
+    linear-gradient(105deg, rgb(188, 211, 236) 39%, rgb(136, 155, 177) 96%), rgb(51, 60, 90);
+
+}
+
+.home-recommend-content-more-laboratory {
+  background:
+    linear-gradient(105deg, rgb(247, 206, 146) 39%, rgb(225, 184, 79) 96%), rgb(255, 184, 79);
+}
+
+.home-recommend-content-more-game {
+  background:
+    linear-gradient(105deg, rgb(255, 244, 159) 39%, rgb(225, 244, 19) 96%), rgb(255, 184, 79);
+}
+
+
+.home-recommend-content {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .home-articles {
@@ -154,7 +197,7 @@ export default {
   height: 170px;
   border-radius: 5px;
   cursor: pointer;
-  background: red;
+  border: 1px solid rgb(136, 155, 177);
 }
 
 .home-articles-card-title {
@@ -172,7 +215,6 @@ export default {
 
 
 .home-recommend img {
-  position: absolute;
   width: 700px;
   height: 350px;
 }
