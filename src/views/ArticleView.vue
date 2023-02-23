@@ -26,7 +26,9 @@
 
 <script>
 
+import 'reset.css'
 import Header from '../components/common/header.vue'
+
 
 export default {
   name: 'ArticleView',
